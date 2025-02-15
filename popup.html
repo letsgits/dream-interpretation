@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 600px;
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+        }
+
+        .chat-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            max-width: 80%;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .message.ai {
+            margin-right: auto;
+        }
+
+        .message.user {
+            margin-left: auto;
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .avatar svg {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+        }
+
+        .message-content {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .message.user .message-content {
+            background-color: #4a90e2;
+            color: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .input-container {
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .dream-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            resize: none;
+            outline: none;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .dream-input::placeholder {
+            color: #999;
+        }
+
+        .submit-button {
+            padding: 8px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            height: 36px;
+            min-width: 80px;
+        }
+
+        .submit-button:hover {
+            background-color: #357abd;
+        }
+
+        .submit-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .dream-input:disabled {
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+        }
+
+        /* 添加加载动画样式 */
+        .loading-dots:after {
+            content: '';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+        /* 优化消息气泡样式 */
+        .message-content {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .message.user .message-content {
+            background-color: #4a90e2;
+            color: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* 添加滚动条样式 */
+        .chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .chat-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+
+        .chat-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .clear-button {
+            padding: 6px 12px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: #666;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .clear-button:hover {
+            background-color: #e5e5e5;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button id="clearButton" class="clear-button"></button>
+    </div>
+    <div class="chat-container" id="chatBox">
+        <div class="message ai">
+            <div class="avatar">
+                <img src="images/icon48.png" alt="AI">
+            </div>
+            <div class="message-content">
+                <div class="text">
+                    <span id="welcomeText"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="userInput" class="dream-input">
+        <button id="sendButton" class="submit-button"></button>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html> 
