@@ -72,7 +72,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 ## 繁體中文完整文檔
 
 ### 安裝方法
-1. 在 Chrome 網上應用店搜索"周公AI解夢"或直接訪問[擴展鏈接]
+1. 在 Chrome 網上應用店搜索"周公AI解夢"或直接訪問[擴展鏈接](https://chromewebstore.google.com/detail/%E5%91%A8%E5%85%ACai%E8%A7%A3%E6%A2%A6/fjdhdompgegffobpahegkcakdbbfjnod)
 2. 點擊"添加至 Chrome"按鈕
 3. 在彈出的確認窗口中點擊"添加擴展程序"
 
@@ -98,7 +98,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 ## 简体中文完整文档
 
 ### 安装方法
-1. 在 Chrome 网上应用店搜索"周公AI解梦"或直接访问[扩展链接]
+1. 在 Chrome 网上应用店搜索"周公AI解梦"或直接访问[扩展链接](https://chromewebstore.google.com/detail/%E5%91%A8%E5%85%ACai%E8%A7%A3%E6%A2%A6/fjdhdompgegffobpahegkcakdbbfjnod)
 2. 点击"添加至 Chrome"按钮
 3. 在弹出的确认窗口中点击"添加扩展程序"
 
@@ -124,7 +124,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 ## English Full Documentation
 
 ### Installation
-1. Search for "AI Dream Interpreter" in the Chrome Web Store or visit [extension link]
+1. Search for "AI Dream Interpreter" in the Chrome Web Store or visit [extension link](https://chromewebstore.google.com/detail/%E5%91%A8%E5%85%ACai%E8%A7%A3%E6%A2%A6/fjdhdompgegffobpahegkcakdbbfjnod)
 2. Click "Add to Chrome" button
 3. Click "Add Extension" in the confirmation popup
 
@@ -150,7 +150,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 ## 日本語完全ドキュメント
 
 ### インストール方法
-1. Chrome ウェブストアで「AI夢解釈」を検索するか、[拡張機能リンク]にアクセス
+1. Chrome ウェブストアで「AI夢解釈」を検索するか、[拡張機能リンク](https://chromewebstore.google.com/detail/%E5%91%A8%E5%85%ACai%E8%A7%A3%E6%A2%A6/fjdhdompgegffobpahegkcakdbbfjnod)にアクセス
 2. 「Chrome に追加」ボタンをクリック
 3. 確認ポップアップで「拡張機能を追加」をクリック
 
@@ -176,7 +176,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 ## 한국어 전체 문서
 
 ### 설치 방법
-1. Chrome 웹 스토어에서 "AI몽해석"을 검색하거나 [확장 프로그램 링크] 방문
+1. Chrome 웹 스토어에서 "AI몽해석"을 검색하거나 [확장 프로그램 링크](https://chromewebstore.google.com/detail/%E5%91%A8%E5%85%ACai%E8%A7%A3%E6%A2%A6/fjdhdompgegffobpahegkcakdbbfjnod) 방문
 2. "Chrome에 추가" 버튼 클릭
 3. 확인 팝업에서 "확장 프로그램 추가" 클릭
 
