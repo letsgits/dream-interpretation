@@ -205,6 +205,9 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 
 - 作者 | Author | 作者 | 작성자：d.y.
 - 官網 | Website | ウェブサイト | 웹사이트：[https://www.lingjiai.com](https://www.lingjiai.com)
+- 社交媒體 | Social Media | ソーシャルメディア | 소셜 미디어：
+  - X (Twitter)：[https://x.com/lingjiaicom](https://x.com/lingjiaicom)
+  - Facebook：[https://www.facebook.com/profile.php?id=61568577838185](https://www.facebook.com/profile.php?id=61568577838185)
 
 ## 更新日誌 | Changelog | 更新履歴 | 업데이트 기록
 
