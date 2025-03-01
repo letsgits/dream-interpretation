@@ -3,8 +3,35 @@ const userInput = document.getElementById('userInput');
 const sendButton = document.getElementById('sendButton');
 const clearButton = document.getElementById('clearButton');
 
-// 初始化国际化文本
-document.addEventListener('DOMContentLoaded', () => {
+// 生成聊天ID，格式：当前日期时间(YmdHis) + 4位随机数
+function generateChatId() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    const prefix = `${year}${month}${day}${hours}${minutes}${seconds}`;
+    const random = Math.floor(Math.random() * 9000) + 1000; // 生成1000-9999之间的随机数
+    
+    return `${prefix}${random}`;
+}
+
+// 获取或初始化聊天ID
+async function initializeChatId() {
+    const result = await chrome.storage.local.get(['chat_id']);
+    if (!result.chat_id) {
+        const newChatId = generateChatId();
+        await chrome.storage.local.set({ chat_id: newChatId });
+        return newChatId;
+    }
+    return result.chat_id;
+}
+
+// 初始化国际化文本和聊天ID
+document.addEventListener('DOMContentLoaded', async () => {
     // 设置欢迎消息
     document.getElementById('welcomeText').textContent = chrome.i18n.getMessage('welcomeMessage');
     
@@ -19,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 聚焦输入框
     userInput.focus();
+    
+    // 确保聊天ID已初始化
+    await initializeChatId();
     
     // 加载保存的聊天记录
     loadChatHistory();
@@ -94,7 +124,7 @@ function displayMessageWithAnimation(sender, text, shouldSave = true, useTypewri
             } else {
                 clearInterval(interval);
             }
-        }, 50);
+        }, 20);
     } else {
         textDiv.innerHTML = text.replace(/\n/g, '<br>');
     }
@@ -105,7 +135,8 @@ function displayMessageWithAnimation(sender, text, shouldSave = true, useTypewri
 // 清空聊天记录
 function clearChat() {
     if (confirm(chrome.i18n.getMessage('confirmClear'))) {
-        chrome.storage.local.remove('chatHistory', () => {
+        // 同时清除聊天记录和聊天ID
+        chrome.storage.local.remove(['chatHistory', 'chat_id'], () => {
             chatBox.innerHTML = '';
             // 重新显示欢迎消息，不使用打字机效果
             displayMessageWithAnimation('ai', chrome.i18n.getMessage('welcomeMessage'), false, false);
@@ -143,6 +174,9 @@ async function sendMessage(message) {
     chatBox.scrollTop = chatBox.scrollHeight;
 
     try {
+        // 获取当前聊天ID
+        const chatId = await initializeChatId();
+        
         const response = await fetch('https://www.lingjiai.com/api/chat', {
             method: 'POST',
             headers: {
@@ -151,7 +185,8 @@ async function sendMessage(message) {
             credentials: 'include',
             body: JSON.stringify({ 
                 message,
-                source: 'chrome'
+                source: 'chrome',
+                chat_id: chatId  // 添加聊天ID到请求中
             })
         });
 

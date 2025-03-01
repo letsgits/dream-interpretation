@@ -12,6 +12,7 @@
 - 🌏 多語言支持：支持繁體中文、簡體中文、英語、日語、韓語
 - 💾 歷史記錄：自動保存聊天記錄，隨時查看歷史解夢內容
 - 🎨 優雅界面：簡潔直觀的用戶界面，打字機效果的回覆動畫
+- 🔄 會話連續性：使用會話ID保持上下文連貫
 
 [查看更多...](#繁體中文完整文檔)
 
@@ -25,6 +26,7 @@
 - 🌏 多语言支持：支持简体中文、繁体中文、英语、日语、韩语
 - 💾 历史记录：自动保存聊天记录，随时查看历史解梦内容
 - 🎨 优雅界面：简洁直观的用户界面，打字机效果的回复动画
+- 🔄 会话连续性：使用会话ID保持上下文连贯
 
 [查看更多...](#简体中文完整文档)
 
@@ -38,6 +40,7 @@ A Chrome extension for intelligent dream interpretation, powered by LingjiAI.
 - 🌏 Multi-language Support: Available in Simplified Chinese, Traditional Chinese, English, Japanese, and Korean
 - 💾 History Records: Auto-save chat history for future reference
 - 🎨 Elegant Interface: Clean UI with typewriter-style response animation
+- 🔄 Conversation Continuity: Maintains context using session IDs
 
 [Read more...](#english-full-documentation)
 
@@ -51,6 +54,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - 🌏 多言語対応：簡体字中国語、繁体字中国語、英語、日本語、韓国語
 - 💾 履歴保存：チャット履歴の自動保存
 - 🎨 エレガントなUI：タイプライター風の返信アニメーション
+- 🔄 会話の連続性：セッションIDを使用して文脈を維持
 
 [詳細を見る...](#日本語完全ドキュメント)
 
@@ -64,6 +68,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - 🌏 다국어 지원：중국어 간체, 중국어 번체, 영어, 일본어, 한국어 지원
 - 💾 기록 저장：채팅 기록 자동 저장
 - 🎨 우아한 인터페이스：타자기 효과의 응답 애니메이션
+- 🔄 대화 연속성：세션 ID를 사용하여 컨텍스트 유지
 
 [더 보기...](#한국어-전체-문서)
 
@@ -87,6 +92,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - 使用原生 JavaScript 開發
 - 支持 Chrome Storage API 實現數據持久化
 - 採用 Chrome i18n API 實現多語言本地化
+- 使用唯一會話ID實現連續對話
 
 ### 隱私說明
 - 擴展僅在必要時請求最小權限
@@ -113,6 +119,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - 使用原生 JavaScript 开发
 - 支持 Chrome Storage API 实现数据持久化
 - 采用 Chrome i18n API 实现多语言本地化
+- 使用唯一会话ID实现连续对话
 
 ### 隐私说明
 - 扩展仅在必要时请求最小权限
@@ -139,6 +146,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - Developed with native JavaScript
 - Uses Chrome Storage API for data persistence
 - Implements Chrome i18n API for localization
+- Maintains conversation context with unique session IDs
 
 ### Privacy Statement
 - Extension requests minimal permissions only when necessary
@@ -165,6 +173,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - ネイティブ JavaScript で開発
 - Chrome Storage API でデータ永続化
 - Chrome i18n API で多言語対応を実現
+- 固有のセッションIDで会話コンテキストを維持
 
 ### プライバシーについて
 - 必要最小限の権限のみを要求
@@ -191,6 +200,7 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
 - 네이티브 JavaScript로 개발
 - Chrome Storage API로 데이터 영속성 구현
 - Chrome i18n API로 다국어 지원 구현
+- 고유 세션 ID로 대화 컨텍스트 유지
 
 ### 개인정보 보호
 - 필요한 최소한의 권한만 요청
@@ -210,6 +220,11 @@ LingjiAIが提供するChrome拡張機能による夢解釈ツール。
   - Facebook：[https://www.facebook.com/profile.php?id=61568577838185](https://www.facebook.com/profile.php?id=61568577838185)
 
 ## 更新日誌 | Changelog | 更新履歴 | 업데이트 기록
+
+### 版本 1.1 | Version 1.1 | バージョン1.1 | 버전 1.1
+- 添加聊天會話ID功能，實現跨會話上下文保持 | Added chat session ID for maintaining context across sessions | チャットセッションID機能を追加し、セッション間のコンテキスト維持を実現 | 채팅 세션 ID 기능 추가로 세션 간 컨텍스트 유지 구현
+- 優化打字機效果的速度 | Improved typewriter effect speed | タイプライター効果の速度を最適化 | 타자기 효과 속도 최적화
+- 修復了聊天記錄保存問題 | Fixed chat history saving issues | チャット履歴の保存問題を修正 | 채팅 기록 저장 문제 해결
 
 ### 版本 1.0 | Version 1.0 | バージョン1.0 | 버전 1.0
 - 首次發布 | Initial release | 初回リリース | 최초 출시

@@ -22,5 +22,8 @@
   },
   "clearButton": {
     "message": "채팅 지우기"
+  },
+  "confirmClear": {
+    "message": "모든 채팅 기록을 지우시겠습니까?"
   }
 } 

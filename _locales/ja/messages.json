@@ -22,5 +22,8 @@
   },
   "clearButton": {
     "message": "チャットをクリア"
+  },
+  "confirmClear": {
+    "message": "すべてのチャット履歴を消去してもよろしいですか？"
   }
 } 

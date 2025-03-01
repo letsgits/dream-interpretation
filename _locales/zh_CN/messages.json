@@ -22,5 +22,8 @@
   },
   "clearButton": {
     "message": "清空聊天记录"
+  },
+  "confirmClear": {
+    "message": "确定要清空所有聊天记录吗？"
   }
 } 

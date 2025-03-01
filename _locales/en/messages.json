@@ -22,5 +22,8 @@
   },
   "clearButton": {
     "message": "Clear Chat"
+  },
+  "confirmClear": {
+    "message": "Are you sure you want to clear all chat history?"
   }
 } 
